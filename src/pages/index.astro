@@ -6,9 +6,9 @@ import Layout from '../layouts/Layout.astro';
 ---
 
 <Layout title="Casa Sonia">
-  <div class="h-5/6 md:w-1/2 mx-auto mt-12 rounded-xl p-1 background w-5/6">
-    <div class="h-full w-full rounded-xl border-2 border-white">
-      <Header>Casa Sonia</Header>
+  <div class="relative">
+    <div class="absolute h-5/6 w-full xl:w-1/2 border-white background">
+      <Header />
       <main>
         <ButtonArea />
         <SocialMedia />
@@ -20,5 +20,10 @@ import Layout from '../layouts/Layout.astro';
 <style>
   .background {
     background-color: #282828;
+  }
+  .absolute {
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
   }
 </style>
